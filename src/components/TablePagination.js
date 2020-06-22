@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import MuiTableRow from '@material-ui/core/TableRow';
 import MuiTableFooter from '@material-ui/core/TableFooter';
 import MuiTablePagination from '@material-ui/core/TablePagination';
+import Toolbar from '@material-ui/core/Toolbar';
 import { withStyles } from '@material-ui/core/styles';
 import { getPageValue } from '../utils';
 
@@ -54,7 +55,7 @@ class TablePagination extends React.Component {
 
     return (
       <MuiTableFooter>
-        <MuiTableRow>
+        <Toolbar>
           <MuiTablePagination
             className={classes.root}
             classes={{
@@ -90,7 +91,7 @@ class TablePagination extends React.Component {
             onChangePage={this.handlePageChange}
             onChangeRowsPerPage={this.handleRowChange}
           />
-        </MuiTableRow>
+        </Toolbar>
       </MuiTableFooter>
     );
   }
