@@ -39,7 +39,7 @@ const useStyles = makeStyles(
       cursor: 'grab',
     },
     sortLabelRoot: {
-      height: '20px',
+      height: '25px',
     },
     sortActive: {
       color: theme.palette.text.primary,
