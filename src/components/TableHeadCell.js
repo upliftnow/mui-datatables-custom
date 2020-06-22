@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import TableCell from '@material-ui/core/TableCell';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
+import ArrowIcon from '@material-ui/icons/ArrowDownward';
 import useColumnDrop from '../hooks/useColumnDrop.js';
 import { makeStyles } from '@material-ui/core/styles';
 import { useDrag } from 'react-dnd';
@@ -221,7 +222,7 @@ const TableHeadCell = ({
                 {children}
               </div>
               <div className={classes.sortAction}>
-                <TableSortLabel {...sortLabelProps} />
+                <TableSortLabel IconComponent={<ArrowIcon fontSize="small" />} {...sortLabelProps} />
               </div>
             </div>
           </Tooltip>
