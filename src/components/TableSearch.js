@@ -1,9 +1,5 @@
 import React from 'react';
-import Grow from '@material-ui/core/Grow';
 import TextField from '@material-ui/core/TextField';
-import SearchIcon from '@material-ui/icons/Search';
-import IconButton from '@material-ui/core/IconButton';
-import ClearIcon from '@material-ui/icons/Clear';
 import { withStyles } from '@material-ui/core/styles';
 
 const ESC_KEY_CODE = 27;
@@ -43,9 +39,7 @@ class TableSearch extends React.Component {
     const { classes, options, onHide, searchText } = this.props;
 
     return (
-      // <Grow appear in={true} timeout={300}>
       <div className={classes.main} ref={el => (this.rootRef = el)}>
-        {/* <SearchIcon className={classes.searchIcon} /> */}
         <TextField
           className={classes.searchText}
           autoFocus={true}
@@ -63,11 +57,7 @@ class TableSearch extends React.Component {
           placeholder={options.searchPlaceholder}
           {...(options.searchProps ? options.searchProps : {})}
         />
-        {/* <IconButton className={classes.clearIcon} onClick={onHide}>
-            <ClearIcon />
-          </IconButton> */}
       </div>
-      // </Grow>
     );
   }
 }
