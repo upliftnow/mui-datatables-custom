@@ -43,31 +43,31 @@ class TableSearch extends React.Component {
     const { classes, options, onHide, searchText } = this.props;
 
     return (
-      <Grow appear in={true} timeout={300}>
-        <div className={classes.main} ref={el => (this.rootRef = el)}>
-          {/* <SearchIcon className={classes.searchIcon} /> */}
-          <TextField
-            className={classes.searchText}
-            autoFocus={true}
-            InputProps={{
-              'data-test-id': options.textLabels.toolbar.search,
-            }}
-            inputProps={{
-              'aria-label': options.textLabels.toolbar.search,
-            }}
-            value={searchText || ''}
-            onKeyDown={this.onKeyDown}
-            onChange={this.handleTextChange}
-            fullWidth={true}
-            inputRef={el => (this.searchField = el)}
-            placeholder={options.searchPlaceholder}
-            {...(options.searchProps ? options.searchProps : {})}
-          />
-          {/* <IconButton className={classes.clearIcon} onClick={onHide}>
+      // <Grow appear in={true} timeout={300}>
+      <div className={classes.main} ref={el => (this.rootRef = el)}>
+        {/* <SearchIcon className={classes.searchIcon} /> */}
+        <TextField
+          className={classes.searchText}
+          autoFocus={true}
+          InputProps={{
+            'data-test-id': options.textLabels.toolbar.search,
+          }}
+          inputProps={{
+            'aria-label': options.textLabels.toolbar.search,
+          }}
+          value={searchText || ''}
+          onKeyDown={this.onKeyDown}
+          onChange={this.handleTextChange}
+          fullWidth={true}
+          inputRef={el => (this.searchField = el)}
+          placeholder={options.searchPlaceholder}
+          {...(options.searchProps ? options.searchProps : {})}
+        />
+        {/* <IconButton className={classes.clearIcon} onClick={onHide}>
             <ClearIcon />
           </IconButton> */}
-        </div>
-      </Grow>
+      </div>
+      // </Grow>
     );
   }
 }
