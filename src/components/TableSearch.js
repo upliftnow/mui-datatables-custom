@@ -45,7 +45,7 @@ class TableSearch extends React.Component {
     return (
       <Grow appear in={true} timeout={300}>
         <div className={classes.main} ref={el => (this.rootRef = el)}>
-          <SearchIcon className={classes.searchIcon} />
+          {/* <SearchIcon className={classes.searchIcon} /> */}
           <TextField
             className={classes.searchText}
             autoFocus={true}
@@ -63,9 +63,9 @@ class TableSearch extends React.Component {
             placeholder={options.searchPlaceholder}
             {...(options.searchProps ? options.searchProps : {})}
           />
-          <IconButton className={classes.clearIcon} onClick={onHide}>
+          {/* <IconButton className={classes.clearIcon} onClick={onHide}>
             <ClearIcon />
-          </IconButton>
+          </IconButton> */}
         </div>
       </Grow>
     );
