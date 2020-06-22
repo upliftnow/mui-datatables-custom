@@ -56,7 +56,7 @@ class TablePagination extends React.Component {
 
     return (
       <MuiTableFooter>
-        <Toolbar>
+        <MuiTableRow>
           <MuiTablePagination
             className={classes.root}
             classes={{
@@ -92,7 +92,7 @@ class TablePagination extends React.Component {
             onChangePage={this.handlePageChange}
             onChangeRowsPerPage={this.handleRowChange}
           />
-        </Toolbar>
+        </MuiTableRow>
       </MuiTableFooter>
     );
   }
